@@ -99,7 +99,7 @@ class MujocoEnv(gym.Env):
 
     @property
     def action_bounds(self):
-        return bounds(self.action_space)
+        return self.action_space.bounds()
 
     def reset_mujoco(self, init_state=None):
         self.sim.reset()
